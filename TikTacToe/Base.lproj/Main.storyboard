@@ -51,7 +51,7 @@
         <!--View Controller-->
         <scene sceneID="Mgo-Eg-7gu">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="LFC-wY-7M7" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="LFC-wY-7M7" customClass="ViewController" customModule="TikTacToe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wTo-Vd-nVT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -147,7 +147,7 @@
         <!--Game-->
         <scene sceneID="3XK-Es-x9n">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="uyp-CE-ojG" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="uyp-CE-ojG" customClass="ViewController" customModule="TikTacToe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Al-Ue-2RB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -161,48 +161,72 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="x"/>
                                 <connections>
-                                    <action selector="moves:" destination="WAy-SY-ezu" eventType="touchUpInside" id="8tZ-gt-ClC"/>
+                                    <action selector="Moves:" destination="uyp-CE-ojG" eventType="touchUpInside" id="LRj-UI-R9S"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZBo-OC-uOA">
                                 <rect key="frame" x="162" y="209" width="90" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="x"/>
+                                <connections>
+                                    <action selector="Moves:" destination="uyp-CE-ojG" eventType="touchUpInside" id="W0q-Io-hXl"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7K-GT-FGF">
                                 <rect key="frame" x="44" y="330" width="90" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="x"/>
+                                <connections>
+                                    <action selector="Moves:" destination="uyp-CE-ojG" eventType="touchUpInside" id="LgR-hu-WSO"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YjS-NE-ACL">
                                 <rect key="frame" x="280" y="330" width="90" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="x"/>
+                                <connections>
+                                    <action selector="Moves:" destination="uyp-CE-ojG" eventType="touchUpInside" id="6rS-xW-nbn"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D76-57-1lB">
                                 <rect key="frame" x="162" y="330" width="90" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="x"/>
+                                <connections>
+                                    <action selector="Moves:" destination="uyp-CE-ojG" eventType="touchUpInside" id="sV9-Kx-ag5"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wwM-de-z36">
                                 <rect key="frame" x="44" y="446" width="90" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="x"/>
+                                <connections>
+                                    <action selector="Moves:" destination="uyp-CE-ojG" eventType="touchUpInside" id="9sa-jf-hxA"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aBd-Fv-iso">
                                 <rect key="frame" x="162" y="446" width="90" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="x"/>
+                                <connections>
+                                    <action selector="Moves:" destination="uyp-CE-ojG" eventType="touchUpInside" id="q16-aQ-rpH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Svw-sf-t78">
                                 <rect key="frame" x="280" y="446" width="90" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="x"/>
+                                <connections>
+                                    <action selector="Moves:" destination="uyp-CE-ojG" eventType="touchUpInside" id="KoL-9e-SCd"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pdg-e0-Dbd">
                                 <rect key="frame" x="280" y="209" width="90" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="x"/>
+                                <connections>
+                                    <action selector="Moves:" destination="uyp-CE-ojG" eventType="touchUpInside" id="oyy-JG-ziF"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="x8N-mA-1qj"/>
@@ -211,14 +235,13 @@
                     <navigationItem key="navigationItem" title="Game" id="chH-hW-Zbm"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G4i-0r-TqK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="WAy-SY-ezu" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2430.434782608696" y="-601.33928571428567"/>
         </scene>
         <!--About the Developers-->
         <scene sceneID="5B9-UF-84z">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="QAz-GG-iw1" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="QAz-GG-iw1" customClass="ViewController" customModule="TikTacToe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e7H-zv-pzp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -234,7 +257,7 @@
         <!--Profile-->
         <scene sceneID="RvD-x7-MCR">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="TZD-C0-cox" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="TZD-C0-cox" customClass="ViewController" customModule="TikTacToe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CPl-8d-3dg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
