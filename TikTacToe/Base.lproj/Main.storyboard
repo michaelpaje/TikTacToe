@@ -93,11 +93,11 @@
             </objects>
             <point key="canvasLocation" x="819" y="71"/>
         </scene>
-        <!--Item-->
+        <!--About-->
         <scene sceneID="ht7-jx-4FK">
             <objects>
                 <navigationController modalPresentationStyle="fullScreen" id="931-64-26S" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" selectedImage="person.fill" catalog="system" id="P2J-vu-OAJ"/>
+                    <tabBarItem key="tabBarItem" title="About" image="person.3.fill" catalog="system" selectedImage="person.3.fill" id="P2J-vu-OAJ"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="WGM-1x-6YK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -110,11 +110,11 @@
             </objects>
             <point key="canvasLocation" x="1646" y="71"/>
         </scene>
-        <!--Item-->
+        <!--Profile-->
         <scene sceneID="Aw1-Ol-OBt">
             <objects>
                 <navigationController modalPresentationStyle="fullScreen" id="8eK-tA-T45" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" selectedImage="person.3.fill" catalog="system" id="eDZ-v2-f4z"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" selectedImage="person.fill" id="eDZ-v2-f4z"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="kqJ-uR-3aV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -127,11 +127,11 @@
             </objects>
             <point key="canvasLocation" x="1645" y="749"/>
         </scene>
-        <!--Item-->
+        <!--Game-->
         <scene sceneID="FGN-KG-Vgl">
             <objects>
                 <navigationController modalPresentationStyle="fullScreen" id="xxw-dk-VO9" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" selectedImage="xmark.circle.fill" catalog="system" id="rBM-f3-GFi"/>
+                    <tabBarItem key="tabBarItem" title="Game" image="xmark.circle.fill" catalog="system" selectedImage="xmark.circle.fill" id="rBM-f3-GFi"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="RJF-aE-uk5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -153,92 +153,118 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tttboard" translatesAutoresizingMaskIntoConstraints="NO" id="1ow-eg-FoQ">
-                                <rect key="frame" x="34" y="190" width="347" height="371"/>
+                                <rect key="frame" x="34" y="229" width="347" height="371"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lld-hk-sRN">
-                                <rect key="frame" x="44" y="209" width="90" height="90"/>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lld-hk-sRN">
+                                <rect key="frame" x="44" y="248" width="90" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="x"/>
                                 <connections>
                                     <action selector="Moves:" destination="uyp-CE-ojG" eventType="touchUpInside" id="LRj-UI-R9S"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZBo-OC-uOA">
-                                <rect key="frame" x="162" y="209" width="90" height="90"/>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZBo-OC-uOA">
+                                <rect key="frame" x="162" y="248" width="90" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="x"/>
                                 <connections>
                                     <action selector="Moves:" destination="uyp-CE-ojG" eventType="touchUpInside" id="W0q-Io-hXl"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7K-GT-FGF">
-                                <rect key="frame" x="44" y="330" width="90" height="90"/>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7K-GT-FGF">
+                                <rect key="frame" x="44" y="369" width="90" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="x"/>
                                 <connections>
                                     <action selector="Moves:" destination="uyp-CE-ojG" eventType="touchUpInside" id="LgR-hu-WSO"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YjS-NE-ACL">
-                                <rect key="frame" x="280" y="330" width="90" height="90"/>
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YjS-NE-ACL">
+                                <rect key="frame" x="280" y="369" width="90" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="x"/>
                                 <connections>
                                     <action selector="Moves:" destination="uyp-CE-ojG" eventType="touchUpInside" id="6rS-xW-nbn"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D76-57-1lB">
-                                <rect key="frame" x="162" y="330" width="90" height="90"/>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D76-57-1lB">
+                                <rect key="frame" x="162" y="369" width="90" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="x"/>
                                 <connections>
                                     <action selector="Moves:" destination="uyp-CE-ojG" eventType="touchUpInside" id="sV9-Kx-ag5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wwM-de-z36">
-                                <rect key="frame" x="44" y="446" width="90" height="90"/>
+                            <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wwM-de-z36">
+                                <rect key="frame" x="44" y="485" width="90" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="x"/>
                                 <connections>
                                     <action selector="Moves:" destination="uyp-CE-ojG" eventType="touchUpInside" id="9sa-jf-hxA"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aBd-Fv-iso">
-                                <rect key="frame" x="162" y="446" width="90" height="90"/>
+                            <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aBd-Fv-iso">
+                                <rect key="frame" x="162" y="485" width="90" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="x"/>
                                 <connections>
                                     <action selector="Moves:" destination="uyp-CE-ojG" eventType="touchUpInside" id="q16-aQ-rpH"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Svw-sf-t78">
-                                <rect key="frame" x="280" y="446" width="90" height="90"/>
+                            <button opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Svw-sf-t78">
+                                <rect key="frame" x="280" y="485" width="90" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="x"/>
                                 <connections>
                                     <action selector="Moves:" destination="uyp-CE-ojG" eventType="touchUpInside" id="KoL-9e-SCd"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pdg-e0-Dbd">
-                                <rect key="frame" x="280" y="209" width="90" height="90"/>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pdg-e0-Dbd">
+                                <rect key="frame" x="280" y="248" width="90" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="x"/>
                                 <connections>
                                     <action selector="Moves:" destination="uyp-CE-ojG" eventType="touchUpInside" id="oyy-JG-ziF"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="x" translatesAutoresizingMaskIntoConstraints="NO" id="YTw-Ig-l81">
+                                <rect key="frame" x="108" y="145" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="'s turn" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mit-hq-ke0">
+                                <rect key="frame" x="166" y="138" width="228" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bCJ-eH-MWB">
+                                <rect key="frame" x="82" y="643" width="250" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <state key="normal" title="PLAY AGAIN">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="playAgain:" destination="uyp-CE-ojG" eventType="touchUpInside" id="yXh-hx-nmO"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="It was a Draw" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VUN-pU-nMO">
+                                <rect key="frame" x="20" y="138" width="374" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="x8N-mA-1qj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Game" id="chH-hW-Zbm"/>
+                    <connections>
+                        <outlet property="drawText" destination="VUN-pU-nMO" id="pmL-k2-o3F"/>
+                        <outlet property="playAgainBtn" destination="bCJ-eH-MWB" id="4V1-9G-4DG"/>
+                        <outlet property="turn" destination="YTw-Ig-l81" id="nQh-Mq-rTq"/>
+                        <outlet property="wonText" destination="mit-hq-ke0" id="0lD-X7-VC8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G4i-0r-TqK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2430.434782608696" y="-601.33928571428567"/>
         </scene>
-        <!--About the Developers-->
+        <!--Profile-->
         <scene sceneID="5B9-UF-84z">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="QAz-GG-iw1" customClass="ViewController" customModule="TikTacToe" customModuleProvider="target" sceneMemberID="viewController">
@@ -248,13 +274,13 @@
                         <viewLayoutGuide key="safeArea" id="qUU-Vn-cKg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="About the Developers" id="C7h-e4-3Yh"/>
+                    <navigationItem key="navigationItem" title="Profile" id="C7h-e4-3Yh"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MDL-4v-HM1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2432" y="749"/>
         </scene>
-        <!--Profile-->
+        <!--About the Developers-->
         <scene sceneID="RvD-x7-MCR">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="TZD-C0-cox" customClass="ViewController" customModule="TikTacToe" customModuleProvider="target" sceneMemberID="viewController">
@@ -264,7 +290,7 @@
                         <viewLayoutGuide key="safeArea" id="1Os-jI-3H6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Profile" id="CzD-Qt-DFu"/>
+                    <navigationItem key="navigationItem" title="About the Developers" id="CzD-Qt-DFu"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dbT-DL-8td" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -277,6 +303,9 @@
         <image name="tttboard" width="360" height="360"/>
         <image name="x" width="980" height="980"/>
         <image name="xmark.circle.fill" catalog="system" width="128" height="121"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
