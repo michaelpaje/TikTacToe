@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     
     @IBAction func Moves(_ sender: UIButton) {
         // check if empty
-        if(state[sender.tag-1] == 0 && isGameActive == true) {
+        if(state[sender.tag-1] == 0 && isGameActive == true && check == false) {
             // put a value on clicked iamge
             state[sender.tag-1] = activePlayer
             if(activePlayer == 1) {
@@ -52,7 +52,7 @@ class ViewController: UIViewController {
             }
         }
         // check if draw
-        if isGameActive == false && check == false {
+        if isGameActive == false {
             turn.isHidden = true
             wonText.isHidden = true
             drawText.isHidden = false
