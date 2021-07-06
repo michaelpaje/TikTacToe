@@ -417,7 +417,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Game Results" id="gyL-Yg-8OF">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="Xtk-YH-VmX">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Xwb-qz-JJG">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Xwb-qz-JJG">
                                 <rect key="frame" x="355" y="13" width="39" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Reset"/>
@@ -481,17 +481,17 @@
         <!--About the Developers-->
         <scene sceneID="RvD-x7-MCR">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="TZD-C0-cox" customClass="ViewController" customModule="TikTacToe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="aboutView" modalPresentationStyle="fullScreen" id="TZD-C0-cox" customClass="AboutViewController" customModule="TikTacToe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CPl-8d-3dg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T9u-8W-quf">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rz_logo" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T9u-8W-quf">
                                 <rect key="frame" x="87" y="112" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3lO-NH-N2O">
-                                <rect key="frame" x="20" y="289" width="374" height="153"/>
+                                <rect key="frame" x="20" y="248" width="374" height="153"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <string key="text">Ryzen 4 is a group of student programmers taking the subject IT0093 Mobile Application 2. As a final project, they decided to create an ios application version of the classic game tictactoe. The group is composed of Michael John Paje, the leader, Camille Monis, Charles Dominic Narag and Niko Andre Lustre. You can click on their profiles below to know more about them.</string>
@@ -499,21 +499,82 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M93-Zs-SNK">
+                                <rect key="frame" x="24" y="398" width="173" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hRN-ME-Lg0">
+                                <rect key="frame" x="221" y="398" width="173" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mBQ-oc-2wU">
+                                <rect key="frame" x="24" y="574" width="173" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Klg-4M-zhC">
+                                <rect key="frame" x="221" y="574" width="173" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cbw-sn-xys">
+                                <rect key="frame" x="52" y="530" width="116" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Michel John Paje"/>
+                                <connections>
+                                    <segue destination="Bxd-nW-cpa" kind="show" id="2yj-uj-sCN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rvh-AZ-4CV">
+                                <rect key="frame" x="228" y="529" width="158" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Charles Dominic Narag"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XeI-lO-CMb">
+                                <rect key="frame" x="62" y="709" width="96" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Camille Monis"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZOm-oO-Tpc">
+                                <rect key="frame" x="246" y="709" width="123" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Niko Andre Lustre"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1Os-jI-3H6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="About the Developers" id="CzD-Qt-DFu"/>
+                    <connections>
+                        <outlet property="cams" destination="mBQ-oc-2wU" id="HmM-Ft-HPK"/>
+                        <outlet property="dom" destination="hRN-ME-Lg0" id="OUU-xu-8Dw"/>
+                        <outlet property="michael" destination="M93-Zs-SNK" id="9wB-Bn-vHQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dbT-DL-8td" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2430.434782608696" y="71.651785714285708"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="gK5-Qd-iTf">
+            <objects>
+                <viewController id="Bxd-nW-cpa" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="C1X-jh-ot5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="8n3-jx-kiQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ewc-c1-goG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0xE-a7-Ily" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3132" y="78"/>
         </scene>
     </scenes>
     <resources>
         <image name="477290" width="512" height="512"/>
         <image name="person.3.fill" catalog="system" width="128" height="61"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="rz_logo" width="940" height="940"/>
         <image name="tttboard" width="360" height="360"/>
         <image name="tttlogo-sample" width="1042" height="1042"/>
         <image name="x" width="980" height="980"/>
