@@ -6,6 +6,7 @@ class ViewController: UIViewController {
     // turn text
     @IBOutlet weak var wonText: UILabel!
     @IBOutlet weak var drawText: UILabel!
+    var wing: Int = Int.init(), loseg: Int = Int.init(), drawg: Int = Int.init()
     var activePlayer = 1 // X
     var state = [0,0,0,0,0,0,0,0,0]
     let winCombinations = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]]
@@ -199,8 +200,18 @@ class ViewController: UIViewController {
                 if (state[combination[0]] == 1)
                 {
                     turn.image = UIImage(named: "x")
+                    if(pickedPlayer == "x"){
+                        wing+=1
+                    }else{
+                        loseg+=1
+                    }
                 } else { // o win
                     turn.image = UIImage(named: "o")
+                    if(pickedPlayer == "o"){
+                        wing+=1
+                    }else{
+                        loseg+=1
+                    }
                 }
                 check = true
                 wonText.text = " WON!"
@@ -227,7 +238,12 @@ class ViewController: UIViewController {
             if(!vP) {
                 changeSidesBtn.isHidden = false
             }
+            drawg+=1
         }
+        print("\(wing) \(drawg) \(loseg)")
+        UserDefaults.standard.setValue(String(wing), forKey: "winr")
+        UserDefaults.standard.set(String(drawg), forKey: "drawr")
+        UserDefaults.standard.set(String(loseg), forKey: "loser")
     }
     
 
@@ -294,5 +310,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    
 }
 
