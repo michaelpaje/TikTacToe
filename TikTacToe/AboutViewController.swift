@@ -8,14 +8,14 @@
 import UIKit
 
 class AboutViewController: UIViewController {
-
+    @IBOutlet var michael: UIImageView!
+    @IBOutlet var dom: UIImageView!
+    @IBOutlet var cams: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        print("Hello")
+        michael.image = UIImage(named: "mj")
+        dom.image = UIImage(named: "dom")
+        cams.image = UIImage(named: "cams")
     }
-    
-
-    
-
 }
+
