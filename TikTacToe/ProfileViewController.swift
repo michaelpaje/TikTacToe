@@ -2,44 +2,42 @@
 //  ProfileViewController.swift
 //  TikTacToe
 //
-//  Created by macstudent on 7/9/21.
+//  Created by macstudent on 7/7/21.
 //
 
 import UIKit
-
-class ProfileViewController: UIViewController,  UITabBarControllerDelegate {
-    func tabBar(tabBar: UITabBar, didSelectItem item: UITabBarItem) {
-            print("hello")
-        }
-    @IBOutlet weak var UsernameLabel: UILabel!
+import Foundation
+class ProfileViewController: UIViewController {
+    
+    
     @IBOutlet weak var WinLabel: UILabel!
-    @IBOutlet weak var DrawLabel: UILabel!
-    @IBOutlet weak var LoseLabel: UILabel!
-    @IBOutlet weak var WinPLabel: UILabel!
-    var win = 0, draw = 0, lose = 0, winp = 0
     override func viewDidLoad() {
         super.viewDidLoad()
-        //change forkey per user
-        win = Int(UserDefaults.standard.value(forKey: "winr") as! String)!
-        draw = Int(UserDefaults.standard.value(forKey: "drawr") as! String)!
-        lose = Int(UserDefaults.standard.value(forKey: "loser") as! String)!
-        winp += (win + draw + lose)
-        winp = (win / winp) * 100
-        WinPLabel.text = "\(winp) %"
-        WinLabel.text = "\(Int(UserDefaults.standard.value(forKey: "winr") as! String)!)"
-        DrawLabel.text = "\(draw)"
-        LoseLabel.text = "\(lose)"
+        //WinLabel.text = String(Int(UserDefaults.standard.string(forKey: "winr")!)!)
     }
-    
-    @IBAction func profilepage(){
-        win = Int(UserDefaults.standard.value(forKey: "winr") as! String)!
-        draw = Int(UserDefaults.standard.value(forKey: "drawr") as! String)!
-        lose = Int(UserDefaults.standard.value(forKey: "loser") as! String)!
-        winp += (win + draw + lose)
-        winp = (win / winp) * 100
-        WinPLabel.text = "\(winp) %"
-        WinLabel.text = "\(Int(UserDefaults.standard.value(forKey: "winr") as! String)!)"
-        DrawLabel.text = "\(draw)"
-        LoseLabel.text = "\(lose)"
-    }
+    /* READING
+     let preferences = NSUserDefaults.standardUserDefaults()
+
+    let currentLevelKey = "currentLevel"
+
+    if preferences.objectForKey(currentLevelKey) == nil {
+        //  Doesn't exist
+    } else {
+        let currentLevel = preferences.integerForKey(currentLevelKey)
+    }*/
+    /* WRITING
+     let preferences = NSUserDefaults.standardUserDefaults()
+
+     let currentLevelKey = "currentLevel"
+
+     let currentLevel = ...
+     preferences.setInteger(currentLevel, forKey: currentLevelKey)
+
+     //  Save to disk
+     let didSave = preferences.synchronize()
+
+     if !didSave {
+         //  Couldn't save (I've never seen this happen in real world testing)
+     }
+     */
 }

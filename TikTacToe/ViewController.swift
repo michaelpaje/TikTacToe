@@ -241,10 +241,9 @@ class ViewController: UIViewController {
             drawg+=1
         }
         print("\(wing) \(drawg) \(loseg)")
-        //change forkey per user
         UserDefaults.standard.setValue(String(wing), forKey: "winr")
-        UserDefaults.standard.setValue(String(drawg), forKey: "drawr")
-        UserDefaults.standard.setValue(String(loseg), forKey: "loser")
+        UserDefaults.standard.set(String(drawg), forKey: "drawr")
+        UserDefaults.standard.set(String(loseg), forKey: "loser")
     }
     
 
