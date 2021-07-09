@@ -17,5 +17,6 @@ class AboutViewController: UIViewController {
         dom.image = UIImage(named: "dom")
         cams.image = UIImage(named: "cams")
     }
+    
 }
 
