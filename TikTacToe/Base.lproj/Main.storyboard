@@ -418,7 +418,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gsT-Gr-OYI">
-                                <rect key="frame" x="301" y="435" width="26" height="21"/>
+                                <rect key="frame" x="301" y="435" width="62" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -465,15 +465,30 @@
                                     </view>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L6a-2P-CTy">
+                                <rect key="frame" x="359" y="119" width="47" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Reload"/>
+                                <connections>
+                                    <action selector="profilepage" destination="QAz-GG-iw1" eventType="touchUpInside" id="MP9-g3-Sq2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qUU-Vn-cKg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="C7h-e4-3Yh"/>
+                    <connections>
+                        <outlet property="DrawLabel" destination="TKP-ec-S9c" id="wpl-iM-zer"/>
+                        <outlet property="LoseLabel" destination="N25-IJ-vOy" id="l1Q-PU-CCy"/>
+                        <outlet property="UsernameLabel" destination="Nej-xt-diM" id="QK1-gI-cua"/>
+                        <outlet property="WinLabel" destination="P3p-Uu-eYi" id="4bC-0m-CXa"/>
+                        <outlet property="WinPLabel" destination="gsT-Gr-OYI" id="UMc-aM-1CB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MDL-4v-HM1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2431.8840579710145" y="748.66071428571422"/>
+            <point key="canvasLocation" x="2430.434782608696" y="748.66071428571422"/>
         </scene>
         <!--Edit Profile-->
         <scene sceneID="Ooc-dD-CG9">
