@@ -11,12 +11,12 @@ class ViewController: UIViewController {
     var state = [0,0,0,0,0,0,0,0,0]
     let winCombinations = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]]
     var isGameActive = true
-    var check = false
     // if vsplayer
     var vP = false
     // if x/o
     var pickedPlayer = ""
     var loop = true
+    var finish = false
     
     // Buttons
     @IBOutlet weak var aBtn: UIButton!
@@ -104,7 +104,6 @@ class ViewController: UIViewController {
         vsComputer.isHidden = false
         isGameActive = false
         wonText.text = "\'s turn"
-        check = false
         reset()
     }
     
@@ -151,46 +150,64 @@ class ViewController: UIViewController {
         return number
     }
     
+    func checkWinner() -> Bool{
+        for combination in winCombinations {
+            if (state[combination[0]] != 0 && state[combination[0]] == state[combination[1]] && state[combination[1]] == state[combination[2]])
+            {
+                isGameActive = false
+                return true
+            }
+        }
+        return false
+    }
+    
     @IBAction func Moves(_ sender: UIButton) {
         // check if empty
-        if(state[sender.tag-1] == 0 && isGameActive == true && check == false) {
+        if(state[sender.tag-1] == 0 && isGameActive == true && checkWinner() == false) {
             // put a value on clicked iamge
             state[sender.tag-1] = activePlayer
             // IF VS PLAYER
             if(vP) {
                 if(activePlayer == 1) {
                     sender.setImage(UIImage(named: "x"), for: UIControl.State())
-                    turn.image = UIImage(named: "o")
-                    activePlayer = 2
+                    if(!checkWinner()) {
+                        turn.image = UIImage(named: "o")
+                        activePlayer = 2
+                    }
                 } else {
                     sender.setImage(UIImage(named: "o"), for: UIControl.State())
-                    turn.image = UIImage(named: "x")
-                    activePlayer = 1
+                    if(!checkWinner()){
+                        turn.image = UIImage(named: "x")
+                        activePlayer = 1
+                    }
                 }
                 // IF VS COMPUTER
             } else {
                 var temp = false
                 if (pickedPlayer == "x") {
                     sender.setImage(UIImage(named: "x"), for: UIControl.State())
-                    activePlayer = 1
                     for i in state {
                         if i == 0 {
                             temp = true
                             break
                         }
                     }
-                    if(temp) {
+                    if(temp && !checkWinner()) {
                         state[computerMove("o")] = 2
                     }
                 } else {
-                    state[computerMove("x")] = 1
+                    if(!checkWinner()) {
+                        state[computerMove("x")] = 1
+                        if checkWinner() {
+                            print("check")
+                        }
+                    }
                     sender.setImage(UIImage(named: "o"), for: UIControl.State())
-                    activePlayer = 2
+                    
                 }
             }
             print(state)
         }
-        
         // check for the winner
         for combination in winCombinations {
             if (state[combination[0]] != 0 && state[combination[0]] == state[combination[1]] && state[combination[1]] == state[combination[2]])
@@ -200,20 +217,25 @@ class ViewController: UIViewController {
                 if (state[combination[0]] == 1)
                 {
                     turn.image = UIImage(named: "x")
-                    if(pickedPlayer == "x"){
-                        wing+=1
-                    }else{
-                        loseg+=1
+                    if(!vP && !finish) {
+                        if(pickedPlayer == "x"){
+                            wing+=1
+                        }else{
+                            loseg+=1
+                        }
+                        finish = true
                     }
-                } else { // o win
+                } else if (state[combination[0]] == 2){ // o win
                     turn.image = UIImage(named: "o")
-                    if(pickedPlayer == "o"){
-                        wing+=1
-                    }else{
-                        loseg+=1
+                    if(!vP && !finish) {
+                        if(pickedPlayer == "o"){
+                            wing+=1
+                        }else{
+                            loseg+=1
+                        }
+                        finish = true
                     }
                 }
-                check = true
                 wonText.text = " WON!"
                 playAgainBtn.isHidden = false
                 if(!vP) {
@@ -221,6 +243,7 @@ class ViewController: UIViewController {
                 }
             }
         }
+        
         isGameActive = false
         // check if all box are clicked
         for i in state {
@@ -230,7 +253,7 @@ class ViewController: UIViewController {
             }
         }
         // check if draw
-        if isGameActive == false && check == false {
+        if isGameActive == false && checkWinner() == false {
             turn.isHidden = true
             wonText.isHidden = true
             drawText.isHidden = false
@@ -258,7 +281,6 @@ class ViewController: UIViewController {
         drawText.isHidden = true
         wonText.isHidden = false
         wonText.text = "\'s turn"
-        check = false
         reset()
         // o
         if(pickedPlayer == "o") {
@@ -281,7 +303,6 @@ class ViewController: UIViewController {
         drawText.isHidden = true
         wonText.isHidden = false
         wonText.text = "\'s turn"
-        check = false
         reset()
         // x > o
         if(pickedPlayer == "x") {
@@ -299,6 +320,7 @@ class ViewController: UIViewController {
     }
     
     func reset() {
+        finish = false
         // reset image button
         for i in 1...9 {
             let button = view.viewWithTag(i) as! UIButton

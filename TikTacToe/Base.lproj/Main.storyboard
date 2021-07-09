@@ -344,7 +344,7 @@
                                     <action selector="startGame:" destination="uyp-CE-ojG" eventType="touchUpInside" id="c4I-KB-iEq"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tttlogo-sample" translatesAutoresizingMaskIntoConstraints="NO" id="Hv9-EG-5S9">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tictactoe-logo" translatesAutoresizingMaskIntoConstraints="NO" id="Hv9-EG-5S9">
                                 <rect key="frame" x="25" y="138" width="365" height="346"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -691,6 +691,7 @@
                         <outlet property="cams" destination="mBQ-oc-2wU" id="HmM-Ft-HPK"/>
                         <outlet property="dom" destination="hRN-ME-Lg0" id="OUU-xu-8Dw"/>
                         <outlet property="michael" destination="M93-Zs-SNK" id="9wB-Bn-vHQ"/>
+                        <outlet property="niko" destination="Klg-4M-zhC" id="4qF-ZQ-AvU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dbT-DL-8td" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1191,8 +1192,8 @@
         <image name="person.3.fill" catalog="system" width="128" height="61"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="rz_logo" width="940" height="940"/>
+        <image name="tictactoe-logo" width="940" height="940"/>
         <image name="tttboard" width="360" height="360"/>
-        <image name="tttlogo-sample" width="1042" height="1042"/>
         <image name="x" width="980" height="980"/>
         <image name="xmark.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="labelColor">
