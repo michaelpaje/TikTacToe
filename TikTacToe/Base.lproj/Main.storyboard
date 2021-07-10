@@ -395,7 +395,7 @@
         <!--Profile-->
         <scene sceneID="5B9-UF-84z">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="QAz-GG-iw1" customClass="ProfileViewController" customModule="TikTacToe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="QAz-GG-iw1" customClass="ViewController" customModule="TikTacToe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e7H-zv-pzp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -405,11 +405,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pSu-10-YEu">
-                                <rect key="frame" x="173" y="655" width="75" height="30"/>
+                                <rect key="frame" x="149" y="655" width="123" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Edit Profile"/>
+                                <state key="normal" title="Change Password"/>
                                 <connections>
-                                    <action selector="EditProfile:" destination="QAz-GG-iw1" eventType="touchUpInside" id="MRt-ba-L0c"/>
                                     <segue destination="UV9-Nb-Nir" kind="push" id="Hsk-rU-3P0"/>
                                 </connections>
                             </button>
@@ -421,14 +420,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P3p-Uu-eYi">
-                                <rect key="frame" x="62" y="511" width="11" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TKP-ec-S9c">
-                                <rect key="frame" x="205" y="511" width="11" height="21"/>
+                                <rect key="frame" x="46" y="511" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -518,6 +510,9 @@
                                 <rect key="frame" x="183" y="699" width="48" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="LogoutUser:" destination="QAz-GG-iw1" eventType="touchUpInside" id="pqL-4t-pKU"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DmJ-1b-fN2">
                                 <rect key="frame" x="20" y="622" width="374" height="1"/>
@@ -531,27 +526,34 @@
                                     </view>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TKP-ec-S9c">
+                                <rect key="frame" x="186" y="511" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qUU-Vn-cKg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="C7h-e4-3Yh"/>
                     <connections>
-                        <outlet property="DrawLabel" destination="TKP-ec-S9c" id="LS9-a2-rDo"/>
-                        <outlet property="LoseLabel" destination="N25-IJ-vOy" id="kFQ-GM-tLe"/>
-                        <outlet property="UsernameLabel" destination="Nej-xt-diM" id="2TS-kE-oXu"/>
-                        <outlet property="WinLabel" destination="P3p-Uu-eYi" id="BKw-AP-Nkz"/>
-                        <outlet property="WinPLabel" destination="gsT-Gr-OYI" id="Npm-gI-NCF"/>
+                        <outlet property="DrawLabel" destination="TKP-ec-S9c" id="ffa-UA-vW3"/>
+                        <outlet property="LoseLabel" destination="N25-IJ-vOy" id="S7c-Zx-ahT"/>
+                        <outlet property="UsernameLabel" destination="Nej-xt-diM" id="3BV-5l-RLn"/>
+                        <outlet property="WinLabel" destination="P3p-Uu-eYi" id="Mkq-Yg-TL6"/>
+                        <outlet property="WinPLabel" destination="gsT-Gr-OYI" id="8vF-j2-Oih"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MDL-4v-HM1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2430.434782608696" y="748.66071428571422"/>
         </scene>
-        <!--Edit Profile-->
+        <!--Change Password-->
         <scene sceneID="Ooc-dD-CG9">
             <objects>
-                <viewController id="UV9-Nb-Nir" customClass="ProfileViewController" customModule="TikTacToe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="UV9-Nb-Nir" customClass="ViewController" customModule="TikTacToe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZZo-4j-MRg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -563,16 +565,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NQb-Sm-Tcj">
-                                <rect key="frame" x="48" y="169" width="252" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="UsernamTextField:" destination="4qu-Dx-MUf" eventType="editingDidEnd" id="nhW-wA-img"/>
-                                    <action selector="UsernameEditText:" destination="4qu-Dx-MUf" eventType="editingDidEnd" id="zXG-bC-0rW"/>
-                                </connections>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2wc-eN-DZF">
                                 <rect key="frame" x="48" y="211" width="136" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -617,24 +609,29 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Done"/>
                                 <connections>
-                                    <action selector="EditButton:" destination="4qu-Dx-MUf" eventType="touchUpInside" id="Dhj-0g-12o"/>
-                                    <action selector="EditButton:" destination="UV9-Nb-Nir" eventType="touchUpInside" id="sm1-2s-ExQ"/>
+                                    <action selector="EditButton:" destination="UV9-Nb-Nir" eventType="touchUpInside" id="gZL-fd-8fl"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pcc-et-9TF">
+                                <rect key="frame" x="48" y="175" width="79" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7Ui-1Y-olT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Edit Profile" id="LHI-jE-dAV"/>
+                    <navigationItem key="navigationItem" title="Change Password" id="LHI-jE-dAV"/>
                     <connections>
-                        <outlet property="ConfirmPassTextField" destination="25K-Wn-LuV" id="NcV-7S-dAe"/>
-                        <outlet property="CurrentPassTextField" destination="qNI-vQ-Nxd" id="Gac-bL-apZ"/>
-                        <outlet property="NewPassTextField" destination="bHy-f9-Aiv" id="VgC-Ft-I7a"/>
-                        <outlet property="UsernameTextField" destination="NQb-Sm-Tcj" id="T0R-hS-Dlc"/>
+                        <outlet property="ConfirmPassTextField" destination="25K-Wn-LuV" id="Ci6-Hd-93Z"/>
+                        <outlet property="CurrentPassTextField" destination="qNI-vQ-Nxd" id="cNO-iG-xHz"/>
+                        <outlet property="NewPassTextField" destination="bHy-f9-Aiv" id="PsP-PO-O2n"/>
+                        <outlet property="UnameLabel" destination="pcc-et-9TF" id="Dhq-hk-HIy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uLC-ck-DPX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="4qu-Dx-MUf" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3132" y="749"/>
         </scene>
