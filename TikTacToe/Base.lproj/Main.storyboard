@@ -407,6 +407,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Edit Profile"/>
                                 <connections>
+                                    <action selector="EditProfile:" destination="QAz-GG-iw1" eventType="touchUpInside" id="MRt-ba-L0c"/>
                                     <segue destination="UV9-Nb-Nir" kind="push" id="Hsk-rU-3P0"/>
                                 </connections>
                             </button>
@@ -481,7 +482,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gsT-Gr-OYI">
-                                <rect key="frame" x="301" y="435" width="26" height="21"/>
+                                <rect key="frame" x="277" y="435" width="117" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -533,15 +534,22 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="C7h-e4-3Yh"/>
+                    <connections>
+                        <outlet property="DrawLabel" destination="TKP-ec-S9c" id="LS9-a2-rDo"/>
+                        <outlet property="LoseLabel" destination="N25-IJ-vOy" id="kFQ-GM-tLe"/>
+                        <outlet property="UsernameLabel" destination="Nej-xt-diM" id="2TS-kE-oXu"/>
+                        <outlet property="WinLabel" destination="P3p-Uu-eYi" id="BKw-AP-Nkz"/>
+                        <outlet property="WinPLabel" destination="gsT-Gr-OYI" id="Npm-gI-NCF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MDL-4v-HM1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2431.8840579710145" y="748.66071428571422"/>
+            <point key="canvasLocation" x="2430.434782608696" y="748.66071428571422"/>
         </scene>
         <!--Edit Profile-->
         <scene sceneID="Ooc-dD-CG9">
             <objects>
-                <viewController id="UV9-Nb-Nir" sceneMemberID="viewController">
+                <viewController id="UV9-Nb-Nir" customClass="ProfileViewController" customModule="TikTacToe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZZo-4j-MRg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -558,6 +566,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="UsernamTextField:" destination="4qu-Dx-MUf" eventType="editingDidEnd" id="nhW-wA-img"/>
+                                    <action selector="UsernameEditText:" destination="4qu-Dx-MUf" eventType="editingDidEnd" id="zXG-bC-0rW"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2wc-eN-DZF">
                                 <rect key="frame" x="48" y="211" width="136" height="21"/>
@@ -602,14 +614,25 @@
                                 <rect key="frame" x="189" y="464" width="37" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="EditButton:" destination="4qu-Dx-MUf" eventType="touchUpInside" id="Dhj-0g-12o"/>
+                                    <action selector="EditButton:" destination="UV9-Nb-Nir" eventType="touchUpInside" id="sm1-2s-ExQ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7Ui-1Y-olT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Edit Profile" id="LHI-jE-dAV"/>
+                    <connections>
+                        <outlet property="ConfirmPassTextField" destination="25K-Wn-LuV" id="NcV-7S-dAe"/>
+                        <outlet property="CurrentPassTextField" destination="qNI-vQ-Nxd" id="Gac-bL-apZ"/>
+                        <outlet property="NewPassTextField" destination="bHy-f9-Aiv" id="VgC-Ft-I7a"/>
+                        <outlet property="UsernameTextField" destination="NQb-Sm-Tcj" id="T0R-hS-Dlc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uLC-ck-DPX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="4qu-Dx-MUf" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3132" y="749"/>
         </scene>

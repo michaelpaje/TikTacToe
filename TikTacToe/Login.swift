@@ -28,6 +28,9 @@ class Login: UIViewController {
             let tempUser = defaults.string(forKey: "Username" + String(i))
             let tempPass = defaults.string(forKey: "Password" + String(i))
             if(tempUser == UnameField.text! && tempPass == PwordField.text!) {
+                defaults.set(tempUser,forKey: "usernamelogin")
+                defaults.set(tempPass,forKey: "passwordlogin")
+                defaults.set(String(i),forKey: "num")
                 success = true
                 break
             }
