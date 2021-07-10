@@ -64,12 +64,18 @@ class Register: UIViewController {
                         defaults.set(UnameReg.text, forKey: "Username" + String(size))
                         defaults.set(PwordReg.text, forKey: "Password" + String(size))
                         defaults.set(size+1, forKey: "size")
+                        defaults.set(0,forKey: "Username" + String(size) + "winr")
+                        defaults.set(0,forKey: "Username" + String(size) + "drawr")
+                        defaults.set(0,forKey: "Username" + String(size) + "loser")
                         let vc = storyboard?.instantiateViewController(identifier: "login_vc") as! Login
                         present(vc, animated: true)
                     } else {
                         if check(UnameReg.text!, size) {
                             defaults.set(UnameReg.text, forKey: "Username" + String(size))
                             defaults.set(PwordReg.text, forKey: "Password" + String(size))
+                            defaults.set(0,forKey: "Username" + String(size) + "winr")
+                            defaults.set(0,forKey: "Username" + String(size) + "drawr")
+                            defaults.set(0,forKey: "Username" + String(size) + "loser")
                             defaults.set(size+1, forKey: "size")
                             let vc = storyboard?.instantiateViewController(identifier: "login_vc") as! Login
                             present(vc, animated: true)

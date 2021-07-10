@@ -6,6 +6,7 @@ class ViewController: UIViewController {
     // turn text
     @IBOutlet weak var wonText: UILabel!
     @IBOutlet weak var drawText: UILabel!
+    let defaults = UserDefaults.standard
     var wing: Int = Int.init(), loseg: Int = Int.init(), drawg: Int = Int.init()
     var activePlayer = 1 // X
     var state = [0,0,0,0,0,0,0,0,0]
@@ -67,6 +68,9 @@ class ViewController: UIViewController {
             vP = true
             setStart()
         } else {
+            wing = defaults.integer(forKey: "Username" + (defaults.value(forKey: "num") as! String) + "winr")
+            drawg = defaults.integer(forKey: "Username" + (defaults.value(forKey: "num") as! String) + "drawr")
+            loseg = defaults.integer(forKey: "Username" + (defaults.value(forKey: "num") as! String) + "loser")
             vP = false
             let alert = UIAlertController(title: "TicTacToe", message: "Pick Sides", preferredStyle: UIAlertController.Style.alert)
             alert.addAction(UIAlertAction(title: "Pick X", style: UIAlertAction.Style.default, handler: {
@@ -241,6 +245,9 @@ class ViewController: UIViewController {
                 if(!vP) {
                     changeSidesBtn.isHidden = false
                 }
+                defaults.set(wing,forKey: "Username" + (defaults.value(forKey: "num") as! String) + "winr")
+                defaults.set(loseg,forKey: "Username" + (defaults.value(forKey: "num") as! String) + "loser")
+                
             }
         }
         
@@ -262,6 +269,7 @@ class ViewController: UIViewController {
                 changeSidesBtn.isHidden = false
             }
             drawg+=1
+            defaults.set(drawg,forKey: "Username" + (defaults.value(forKey: "num") as! String) + "drawr")
         }
         print("\(wing) \(drawg) \(loseg)")
         UserDefaults.standard.setValue(String(wing), forKey: "winr")
