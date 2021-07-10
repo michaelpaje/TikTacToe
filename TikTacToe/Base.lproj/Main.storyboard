@@ -45,8 +45,8 @@
                                 <rect key="frame" x="57" y="97" width="301" height="213"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1tr-Ne-07V">
-                                <rect key="frame" x="134" y="654" width="146" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1tr-Ne-07V">
+                                <rect key="frame" x="107" y="654" width="200" height="50"/>
                                 <color key="backgroundColor" red="0.18821519610000001" green="0.18824818730000001" blue="0.18820798399999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="3TS-c0-c5a"/>
@@ -58,8 +58,8 @@
                                     <action selector="registerbtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xvK-IM-loh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Be1-aE-LhX">
-                                <rect key="frame" x="134" y="579" width="146" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Be1-aE-LhX">
+                                <rect key="frame" x="107" y="579" width="200" height="50"/>
                                 <color key="backgroundColor" red="0.21522976534882776" green="0.21522976534882776" blue="0.21522976534882776" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Puv-WO-987"/>
@@ -149,8 +149,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H0p-lB-xlX">
-                                <rect key="frame" x="134" y="629" width="146" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H0p-lB-xlX">
+                                <rect key="frame" x="107" y="629" width="200" height="50"/>
                                 <color key="backgroundColor" red="0.21566385029999999" green="0.21570059659999999" blue="0.21565580370000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="27w-3r-860"/>
@@ -158,13 +158,13 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <color key="tintColor" systemColor="systemBackgroundColor"/>
-                                <state key="normal" title="Confirm"/>
+                                <state key="normal" title="Register"/>
                                 <connections>
                                     <action selector="ConfirmReg:" destination="LFC-wY-7M7" eventType="touchUpInside" id="DTW-d0-iZT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nZi-uR-Fy5">
-                                <rect key="frame" x="134" y="704" width="146" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nZi-uR-Fy5">
+                                <rect key="frame" x="107" y="704" width="200" height="50"/>
                                 <color key="backgroundColor" red="0.21566385029999999" green="0.21570059659999999" blue="0.21565580370000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="Pee-8A-rJJ"/>
@@ -172,7 +172,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <color key="tintColor" systemColor="systemBackgroundColor"/>
-                                <state key="normal" title="Cancel"/>
+                                <state key="normal" title="Back to Login"/>
                                 <connections>
                                     <action selector="CancelReg:" destination="LFC-wY-7M7" eventType="touchUpInside" id="xjP-lQ-gQP"/>
                                 </connections>
