@@ -278,9 +278,9 @@ class ViewController: UIViewController {
             playAgainBtn.isHidden = false
             if(!vP) {
                 changeSidesBtn.isHidden = false
-            }else{
                 drawg+=1
                 defaults.set(drawg,forKey: "Username" + (defaults.value(forKey: "num") as! String) + "drawr")
+            
             }
         }
     }
@@ -355,7 +355,6 @@ class ViewController: UIViewController {
         let User = (defaults.value(forKey: "usernamelogin") as! String)
         UsernameLabel?.text = "\(User)"
         UnameLabel?.text = "\(User)"
-        //UsernameLabel.text = (defaults.value(forKey: "usernamelogin") as! String)
         win = defaults.integer(forKey: "Username" + (defaults.value(forKey: "num") as! String) + "winr")
         draw = defaults.integer(forKey: "Username" + (defaults.value(forKey: "num") as! String) + "drawr")
         lose = defaults.integer(forKey: "Username" + (defaults.value(forKey: "num") as! String) + "loser")
@@ -422,6 +421,7 @@ class ViewController: UIViewController {
                     
                         let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
                             print("Ok button tapped")
+                            self.dismiss (animated: true, completion: nil)
                          })
                     
                     successMessage.addAction(ok)
