@@ -1,10 +1,3 @@
-//
-//  Login.swift
-//  TikTacToe
-//
-//  Created by macstudent on 7/9/21.
-//
-
 import UIKit
 
 class Login: UIViewController {
