@@ -460,8 +460,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pSu-10-YEu">
-                                <rect key="frame" x="149" y="655" width="123" height="30"/>
+                                <rect key="frame" x="128" y="654" width="158" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Change Password"/>
                                 <connections>
                                     <segue destination="UV9-Nb-Nir" kind="push" id="Hsk-rU-3P0"/>
@@ -561,14 +562,6 @@
                                     </view>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K9z-69-Lbk">
-                                <rect key="frame" x="183" y="699" width="48" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Logout"/>
-                                <connections>
-                                    <action selector="LogoutUser:" destination="QAz-GG-iw1" eventType="touchUpInside" id="pqL-4t-pKU"/>
-                                </connections>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DmJ-1b-fN2">
                                 <rect key="frame" x="20" y="622" width="374" height="1"/>
                                 <subviews>
@@ -588,6 +581,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K9z-69-Lbk">
+                                <rect key="frame" x="176" y="698" width="62" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="LogoutUser:" destination="QAz-GG-iw1" eventType="touchUpInside" id="pqL-4t-pKU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qUU-Vn-cKg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -659,14 +661,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYR-A4-8B6">
-                                <rect key="frame" x="189" y="449" width="37" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Done"/>
-                                <connections>
-                                    <action selector="EditButton:" destination="UV9-Nb-Nir" eventType="touchUpInside" id="gZL-fd-8fl"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pcc-et-9TF">
                                 <rect key="frame" x="159" y="140" width="97" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -674,6 +668,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYR-A4-8B6">
+                                <rect key="frame" x="129" y="430" width="158" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Change Password"/>
+                                <connections>
+                                    <action selector="EditButton:" destination="UV9-Nb-Nir" eventType="touchUpInside" id="gZL-fd-8fl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7Ui-1Y-olT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1287,7 +1290,7 @@
         <segue reference="ec3-Ja-Mt3"/>
         <segue reference="8S6-rR-hSZ"/>
         <segue reference="Vv0-fP-SIa"/>
-        <segue reference="2yj-uj-sCN"/>
+        <segue reference="vLx-85-caM"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="477290" width="512" height="512"/>
