@@ -1,4 +1,5 @@
 import UIKit
+import Foundation
 
 class ViewController: UIViewController {
     // image per turn text
@@ -8,6 +9,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var drawText: UILabel!
     let defaults = UserDefaults.standard
     var wing: Int = Int.init(), loseg: Int = Int.init(), drawg: Int = Int.init()
+    var win = 0, draw = 0, lose = 0, winp: Double = 0
+    var winpd = Double.init()
     var activePlayer = 1 // X
     var state = [0,0,0,0,0,0,0,0,0]
     let winCombinations = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]]
@@ -18,6 +21,14 @@ class ViewController: UIViewController {
     var pickedPlayer = ""
     var loop = true
     var finish = false
+    
+    //Profile
+    @IBOutlet weak var UsernameLabel: UILabel?
+    
+    @IBOutlet weak var WinPLabel: UILabel?
+    @IBOutlet weak var WinLabel: UILabel?
+    @IBOutlet weak var DrawLabel: UILabel?
+    @IBOutlet weak var LoseLabel: UILabel?
     
     // Buttons
     @IBOutlet weak var aBtn: UIButton!
@@ -224,6 +235,7 @@ class ViewController: UIViewController {
                     if(!vP && !finish) {
                         if(pickedPlayer == "x"){
                             wing+=1
+                            
                         }else{
                             loseg+=1
                         }
@@ -247,7 +259,6 @@ class ViewController: UIViewController {
                 }
                 defaults.set(wing,forKey: "Username" + (defaults.value(forKey: "num") as! String) + "winr")
                 defaults.set(loseg,forKey: "Username" + (defaults.value(forKey: "num") as! String) + "loser")
-                
             }
         }
         
@@ -271,10 +282,6 @@ class ViewController: UIViewController {
             drawg+=1
             defaults.set(drawg,forKey: "Username" + (defaults.value(forKey: "num") as! String) + "drawr")
         }
-        print("\(wing) \(drawg) \(loseg)")
-        UserDefaults.standard.setValue(String(wing), forKey: "winr")
-        UserDefaults.standard.set(String(drawg), forKey: "drawr")
-        UserDefaults.standard.set(String(loseg), forKey: "loser")
     }
     
 
@@ -299,6 +306,7 @@ class ViewController: UIViewController {
             turn.image = UIImage(named: "x")
             activePlayer = 1
         }
+        WinLabel?.text = "\(win)"
     }
     
     
@@ -333,13 +341,99 @@ class ViewController: UIViewController {
         for i in 1...9 {
             let button = view.viewWithTag(i) as! UIButton
             button.setImage(nil, for: UIControl.State())
+            WinLabel?.text = "\(win)"
+        }
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        let User = (defaults.value(forKey: "usernamelogin") as! String)
+        UsernameLabel?.text = "\(User)"
+        UnameLabel?.text = "\(User)"
+        //UsernameLabel.text = (defaults.value(forKey: "usernamelogin") as! String)
+        win = defaults.integer(forKey: "Username" + (defaults.value(forKey: "num") as! String) + "winr")
+        draw = defaults.integer(forKey: "Username" + (defaults.value(forKey: "num") as! String) + "drawr")
+        lose = defaults.integer(forKey: "Username" + (defaults.value(forKey: "num") as! String) + "loser")
+        winp = Double(win + draw + lose)
+        if(winp != 0){
+            winp = (Double(win) / winp) * 100.0
+        }
+        WinPLabel?.text = "\(String(format: "%.2f", winp)) %"
+        WinLabel?.text = "\(win)"
+        DrawLabel?.text = "\(draw)"
+        LoseLabel?.text = "\(lose)"
+    }
+    @IBOutlet weak var UnameLabel: UILabel?
+    @IBOutlet weak var CurrentPassTextField: UITextField!
+    @IBOutlet weak var NewPassTextField: UITextField!
+    @IBOutlet weak var ConfirmPassTextField: UITextField!
+
+    @IBAction func EditButton(_ sender: Any) {
+        if  CurrentPassTextField.text?.isEmpty == true || NewPassTextField.text?.isEmpty == true || ConfirmPassTextField.text?.isEmpty == true {
+            let errorMessage = UIAlertController(title: "Change Password Failed", message: "Make sure all information is filled", preferredStyle: .alert)
+                    
+                    // Create OK button with action handler
+                    let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
+                        print("Ok button tapped")
+                     })
+                    
+                    //Add OK button to a dialog message
+                    errorMessage.addAction(ok)
+                    // Present Alert to
+                    self.present(errorMessage, animated: true, completion: nil)
+        }else{
+            
+            if(CurrentPassTextField.text != (defaults.value(forKey: "passwordlogin") as! String)){
+                let errorMessage = UIAlertController(title: "Change Password Failed", message: "Incorrect current password.", preferredStyle: .alert)
+                        
+                        // Create OK button with action handler
+                        let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
+                            print("Ok button tapped")
+                         })
+                        
+                        //Add OK button to a dialog message
+                        errorMessage.addAction(ok)
+                        // Present Alert to
+                        self.present(errorMessage, animated: true, completion: nil)
+                print("not same!")
+            }
+            else{
+                if(NewPassTextField.text != ConfirmPassTextField.text){
+                    let errorMessage = UIAlertController(title: "Change Password Failed", message: "New Password and Confirm New Password does not match.", preferredStyle: .alert)
+                            
+                            // Create OK button with action handler
+                            let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
+                                print("Ok button tapped")
+                             })
+                            
+                            //Add OK button to a dialog message
+                            errorMessage.addAction(ok)
+                            // Present Alert to
+                            self.present(errorMessage, animated: true, completion: nil)
+                    print("not same")
+                }else{
+                    defaults.set(ConfirmPassTextField.text, forKey: "Password" + (defaults.value(forKey: "num") as! String))
+                    let successMessage = UIAlertController(title: "Change Password", message: "Change Password Succesfully!", preferredStyle: .alert)
+                    
+                        let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
+                            print("Ok button tapped")
+                         })
+                    
+                    successMessage.addAction(ok)
+                    self.present(successMessage, animated: true, completion: nil)
+                }
+            }
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    @IBAction func LogoutUser(_ sender: Any) {
+        //let vc = storyboard?.instantiateViewController(identifier: "login_vc") as! Login
+       // present(vc, animated: true)
+        dismiss (animated: true, completion: nil)
     }
-    
 }
 
