@@ -278,9 +278,10 @@ class ViewController: UIViewController {
             playAgainBtn.isHidden = false
             if(!vP) {
                 changeSidesBtn.isHidden = false
+            }else{
+                drawg+=1
+                defaults.set(drawg,forKey: "Username" + (defaults.value(forKey: "num") as! String) + "drawr")
             }
-            drawg+=1
-            defaults.set(drawg,forKey: "Username" + (defaults.value(forKey: "num") as! String) + "drawr")
         }
     }
     
