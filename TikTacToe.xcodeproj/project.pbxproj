@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E2E034B2699CC1D0000D09F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E2E034A2699CC1D0000D09F /* LaunchScreen.storyboard */; };
 		8EEEAC28268EE90B006CB8C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEEAC27268EE90B006CB8C9 /* AppDelegate.swift */; };
 		8EEEAC2A268EE90B006CB8C9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEEAC29268EE90B006CB8C9 /* SceneDelegate.swift */; };
 		8EEEAC2C268EE90B006CB8C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEEAC2B268EE90B006CB8C9 /* ViewController.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8E2E034A2699CC1D0000D09F /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8EEEAC24268EE90B006CB8C9 /* TikTacToe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TikTacToe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EEEAC27268EE90B006CB8C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8EEEAC29268EE90B006CB8C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				8EEEAC35268EE90D006CB8C9 /* Info.plist */,
 				9BED39DD2690569A000FB763 /* AboutViewController.swift */,
 				9B11A7FE269694D30047BA62 /* aboutMJViewController.swift */,
+				8E2E034A2699CC1D0000D09F /* LaunchScreen.storyboard */,
 			);
 			path = TikTacToe;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EEEAC34268EE90D006CB8C9 /* LaunchScreen.storyboard in Resources */,
+				8E2E034B2699CC1D0000D09F /* LaunchScreen.storyboard in Resources */,
 				8EEEAC31268EE90D006CB8C9 /* Assets.xcassets in Resources */,
 				8EEEAC2F268EE90B006CB8C9 /* Main.storyboard in Resources */,
 			);
